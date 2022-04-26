@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/host"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12">
+
+            <LinearLayout
+                android:id="@+id/potHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/my_pot"
+                    android:background="@color/brown_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/menu"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/menuicon"
+                        style="?android:borderlessButtonStyle"/>
+
+                    <TextView
+                        android:id="@+id/today_year"
+                        android:layout_width="75dp"
+                        android:layout_height="40dp"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/font_regular"
+                        android:textColor="@color/white"
+                        android:background="@color/brown_light"
+                        android:layout_marginTop="10dp"
+                        style="?android:borderlessButtonStyle"/>
+
+                    <TextView
+                        android:id="@+id/today_month"
+                        android:layout_width="55dp"
+                        android:layout_height="40dp"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/font_regular"
+                        android:textColor="@color/white"
+                        android:background="@color/brown_light"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        style="?android:borderlessButtonStyle"/>
+
+                    <TextView
+                        android:id="@+id/today_day"
+                        android:layout_width="55dp"
+                        android:layout_height="40dp"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/font_regular"
+                        android:textColor="@color/white"
+                        android:background="@color/brown_light"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        style="?android:borderlessButtonStyle"/>
+
+                    <TextView
+                        android:id="@+id/today_weekday"
+                        android:layout_width="75dp"
+                        android:layout_height="40dp"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/font_regular"
+                        android:textColor="@color/white"
+                        android:background="@color/brown_light"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        style="?android:borderlessButtonStyle"/>
+
+                </LinearLayout>
+
+                <GridLayout
+                    android:id="@+id/potBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:columnCount="1"
+                    android:background="@drawable/pot_background1">
+
+                    <TableRow>
+                        <Button
+                            android:id="@+id/today"
+                            android:text="@string/today"
+                            android:textColor="@color/red"
+                            android:textSize="18sp"
+                            android:onClick="onClick"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:drawableBottom="@drawable/today_image"
+                            android:backgroundTint="@color/btn_tsp"
+                            style="?android:borderlessButtonStyle"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <ImageButton
+                            android:id="@+id/sound"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/sound_on_off"
+                            style="?android:borderlessButtonStyle"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <FrameLayout
+                            android:id="@+id/bodies"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/pot"
+                                android:layout_width="180dp"
+                                android:layout_height="360dp"
+                                android:src="@drawable/pot"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="40dp"/>
+
+                            <com.dinuscxj.progressbar.CircleProgressBar
+                                android:id="@+id/progressBar"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                app:progress_text_size="20sp"
+                                app:style="solid_line"
+                                app:progress_stroke_width="10dp "
+                                app:progress_stroke_cap="round"
+                                app:progress_start_color="#FFBB00"
+                                app:progress_end_color="#ABF200"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_gravity="center|bottom"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginBottom="35dp"
+                                tools:ignore="MissingClass" />
+
+                        </FrameLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/audio"
+                            android:layout_width="180dp"
+                            android:layout_height="224dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/audio_on"
+                            android:layout_marginTop="115dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+                        <View
+                            android:layout_width="325dp"
+                            android:layout_height="0dp" />
+
+                        <ImageButton
+                            android:id="@+id/plus"
+                            android:layout_width="95dp"
+                            android:layout_height="90dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/plus"
+                            android:onClick="onClick"
+                            style="?android:borderlessButtonStyle"/>
+                    </TableRow>
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gardenHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/my_garden"
+                    android:text="@string/MyGarden"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/font_title"
+                    android:textColor="@color/white"
+                    android:background="@color/brown_dark"
+                    android:paddingTop="14dp"
+                    android:paddingLeft="18dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:columnCount="1"
+                    android:background="@drawable/garden">
+
+                    <TableRow>
+                        <Button
+                            android:id="@+id/group_A"
+                            android:text="@string/groupA"
+                            android:textSize="32sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/font_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="420dp"
+                            android:layout_marginLeft="15dp"
+                            style="?android:borderlessButtonStyle"/>
+
+                        <Button
+                            android:id="@+id/group_B"
+                            android:text="@string/groupB"
+                            android:textSize="30sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/font_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="417dp"
+                            android:layout_marginLeft="110dp"
+                            style="?android:borderlessButtonStyle"/>
+
+                    </TableRow>
+
+                    <TableRow>
+                        <Button
+                            android:id="@+id/group_C"
+                            android:text="@string/groupC"
+                            android:textSize="32sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/font_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="15dp"
+                            style="?android:borderlessButtonStyle"/>
+
+                        <Button
+                            android:id="@+id/group_D"
+                            android:text="@string/groupD"
+                            android:textSize="32sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/font_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="150dp"
+                            style="?android:borderlessButtonStyle"/>
+                    </TableRow>
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/calendarHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/my_calendar"
+                    android:text="@string/MyCalendar"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/font_title"
+                    android:textColor="@color/white"
+                    android:background="@color/brown_dark"
+                    android:paddingTop="14dp"
+                    android:paddingLeft="18dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <CalendarView
+                    android:id="@+id/calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@id/my_calendar"
+                    android:focusedMonthDateColor="#EC5656"
+
+                    android:maxDate="12/31/2023"
+                    android:minDate="01/01/2020"
+                    android:selectedWeekBackgroundColor="#ffff00"
+                    android:showWeekNumber="false"
+                    android:unfocusedMonthDateColor="#0000ff"
+                    android:weekSeparatorLineColor="#00ff00" />
+                <ListView
+                    android:id="@+id/home_listview_simple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/calendar"/>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/brown_light"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</TabHost>

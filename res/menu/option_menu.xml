@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu1"
+        android:title="음악 설정">
+
+        <menu>
+            <item
+                android:id="@+id/adventure"
+                android:title="Adventure">
+            </item>
+
+            <item
+                android:id="@+id/creative"
+                android:title="Creative">
+            </item>
+
+            <item
+                android:id="@+id/evolution"
+                android:title="Evolution">
+            </item>
+
+            <item
+                android:id="@+id/memories"
+                android:title="Memories">
+            </item>
+
+            <item
+                android:id="@+id/once"
+                android:title="Once">
+            </item>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu2"
+        android:title="배경 설정">
+
+        <menu>
+            <item
+                android:id="@+id/bg1"
+                android:title="배경 1">
+            </item>
+
+            <item
+                android:id="@+id/bg2"
+                android:title="배경 2">
+            </item>
+
+            <item
+                android:id="@+id/bg3"
+                android:title="배경 3">
+            </item>
+
+            <item
+                android:id="@+id/bg4"
+                android:title="배경 4">
+            </item>
+
+            <item
+                android:id="@+id/bg5"
+                android:title="배경 5">
+            </item>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu3"
+        android:title="달성 목록">
+    </item>
+
+    <item
+        android:id="@+id/menu4"
+        android:title="로그아웃">
+    </item>
+</menu>

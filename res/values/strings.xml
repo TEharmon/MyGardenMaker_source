@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My Gardenmaker</string>
+
+    <string name="MyPot"> My Pot</string>
+    <string name="MyGarden"> My Garden</string>
+    <string name="MyCalendar"> My Calendar</string>
+
+    <string name="groupA"> A </string>
+    <string name="groupB"> B </string>
+    <string name="groupC"> C </string>
+    <string name="groupD"> D </string>
+
+    <string name="today"> Today</string>
+
+    <string-array name="Patternloop">
+        <item>반복안함</item>
+        <item>하루에한번</item>
+        <item>일주일에한번</item>
+        <item>한달에한번</item>
+        <item>일년에한번</item>
+
+    </string-array>
+</resources>

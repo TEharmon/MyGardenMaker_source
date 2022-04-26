@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->zz
+    <style name="Theme.MyGardenmaker" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- No Title Bar-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimaryDark">@color/brown_light</item>
+        <item name="colorAccent">@color/blue_sky</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+</resources>
